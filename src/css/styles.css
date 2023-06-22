@@ -12,3 +12,24 @@
   display: flex;
   flex-direction: column;
 }
+
+.splash-animation {
+  position: absolute;
+  z-index: -1;
+  top: 30vh;
+  width: 70vw;
+  height: 70vh;
+  background-image: url("../assets/img/hbd.gif");
+  background-position: contain;
+  background-repeat: no-repeat;
+  animation: move 30s linear infinite;
+}
+
+@keyframes move{
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -30,6 +30,7 @@ function displayThird(response) {
   input1.name = "work";
   input1.value = "I know";
   label1.textContent = "I know";
+  label1.append(input1);
 
   const input2 = document.createElement("input");
   const label2 = document.createElement("label");
@@ -37,6 +38,7 @@ function displayThird(response) {
   input2.name = "work";
   input2.value = "I am pretty tired";
   label2.textContent = "I am pretty tired...";
+  label2.append(input2)
 
   const input3 = document.createElement("input");
   const label3 = document.createElement("label");
@@ -44,12 +46,13 @@ function displayThird(response) {
   input3.name = "work";
   input3.value = "not so bad";
   label3.textContent = "It's not so bad, but...go on...";
+  label3.append(input3)
 
   const button = document.createElement("button");
   button.type = "submit";
   button.textContent = "Submit";
 
-  form.append(input1, label1, input2, label2, input3, label3, button);
+  form.append(label1, label2, label3, button);
   form.addEventListener("submit", handleThirdFormSubmit);
 
   mainDiv.append(h1, h2, form); 
